@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">{{case.id}}.{{case.owner}}</h4>
+    <h6 class="card-subtitle mb-2 text-muted">status:  {{case.status}}
+      <a [style.display]="case.status == 'found' ? 'none': ''" (click)="foundCase(case.id)"  class="btn btn-primary btn-sm" role="button" aria-disabled="true">Chenge status to "FIND"</a>
+    </h6>
+    <h6 class="card-subtitle mb-2 text-muted">officer_id: {{case.officer_id}}</h6>
+    <p class="card-text">
+      Description:{{case.description}}
+    </p>
+    <h6 class="card-subtitle mb-2 text-muted">Date: {{case.dataOfEvent}}</h6>
+
+
+  </div>
+</div>
+

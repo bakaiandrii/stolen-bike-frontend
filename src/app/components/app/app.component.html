@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="row justify-content-center">
+    <h2>All Stolen Bike Cases</h2>
+  </div>
+
+      <app-case *ngFor="let c of case" [case]="c"></app-case>
+
+
+  <div class="row justify-content-center">
+    <h2>Form For Stolen Bike Cases</h2>
+  </div>
+  <form [formGroup]="caseForm" (ngSubmit)="submitCaseForm()">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Owner of bike</label>
+      <div class="col-sm-10">
+        <input formControlName="owner" type="text" name="owner" class="form-control" id="inputEmail3" placeholder="owner">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputDesc" class="col-sm-2 col-form-label">Short description of bike</label>
+      <div class="col-sm-10">
+        <input formControlName="description" type="text" name="description" class="form-control" id="inputDesc" placeholder="description">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 offset-sm-2">
+        <button type="submit" class="btn btn-warning">ADD NEW CASE</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="row justify-content-center">
+    <h2>Form For New Officer</h2>
+  </div>
+  <form [formGroup]="officerForm" (ngSubmit)="submitOfficerForm()">
+    <div class="form-group row">
+      <label for="inputOf" class="col-sm-2 col-form-label">Full officer name  </label>
+      <div class="col-sm-10">
+        <input formControlName="name" type="text" name="name" class="form-control" id="inputOf" placeholder="name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 offset-sm-2">
+        <button type="submit" class="btn btn-warning">ADD NEW Officer</button>
+      </div>
+    </div>
+  </form>
+
+</div>
